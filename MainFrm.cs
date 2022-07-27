@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace msnld_client
 {
     public partial class MainFrm : Form
@@ -27,9 +29,8 @@ namespace msnld_client
         private void joinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             JoinFrm joinFrm = new JoinFrm();
-            joinFrm.MdiParent = this;
             joinFrm.StartPosition = FormStartPosition.CenterParent;
-            joinFrm.Show();
+            joinFrm.ShowDialog();
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +61,11 @@ namespace msnld_client
             if (this.ActiveMdiChild != null) {
                 this.ActiveMdiChild.Close();
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://github.com/MSNLD/msnld-client/blob/master/README.md") { UseShellExecute = true });
         }
     }
 }
