@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ChannelFrm";
-            this.Text = "ChannelFrm";
+            this.Text = "Chatroom";
             this.Load += new System.EventHandler(this.ChannelFrm_Load);
             this.ResumeLayout(false);
 

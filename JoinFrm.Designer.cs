@@ -150,6 +150,7 @@
             this.Controls.Add(this.JoinChannelName);
             this.Controls.Add(this.label2);
             this.Name = "JoinFrm";
+            this.Text = "Join a chatroom...";
             this.Load += new System.EventHandler(this.JoinFrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
