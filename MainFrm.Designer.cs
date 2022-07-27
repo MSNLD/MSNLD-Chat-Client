@@ -31,8 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.joinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,23 +59,23 @@
             // joinToolStripMenuItem
             // 
             this.joinToolStripMenuItem.Name = "joinToolStripMenuItem";
-            this.joinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.joinToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.joinToolStripMenuItem.Text = "&Join";
             this.joinToolStripMenuItem.Click += new System.EventHandler(this.joinToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "&Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // MainFrm
             // 
@@ -86,7 +86,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFrm";
-            this.Text = "MSNLD Client";
+            this.Text = "MSNLD Chat";
             this.Load += new System.EventHandler(this.MainFrm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

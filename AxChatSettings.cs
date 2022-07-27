@@ -2,9 +2,11 @@
 {
     public class AxChatSettings : AxHost
     {
-        public AxChatSettings() : base("{FA980E7E-9E44-4d2f-B3C2-9A5BE42525F8}")
+        Form parentFrm;
+        public AxChatSettings(Form parentFrm) : base("{FA980E7E-9E44-4d2f-B3C2-9A5BE42525F8}")
         {
             this.SetAboutBoxDelegate(null);
+            this.parentFrm = parentFrm;
         }
 
         protected override void AttachInterfaces()
@@ -13,8 +15,10 @@
             {
                 // Attach the ChatSettings interface to the ActiveX control.
                 var ocx = (MSNChat.IChatSettings)this.GetOcx();
-                //ocx.BackColor = ToUint(Color.White);
-                //ocx.ForeColor = ToUint(Color.White);
+                // Background Color
+                ocx.BackColor = AxHost.GetOleColorFromColor(this.parentFrm.BackColor);
+                // Section Titles
+                ocx.ForeColor = AxHost.GetOleColorFromColor(this.parentFrm.ForeColor);
                 //ocx.RedirectURL = "";
                 //ocx.ResDLL = "";
             }
@@ -23,10 +27,5 @@
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
-
-/*        private static uint ToUint(Color c)
-        {
-            return (uint)(((c.A << 24) | (c.R << 16) | (c.G << 8) | c.B) & 0xffffffffL);
-        }*/
     }
 }

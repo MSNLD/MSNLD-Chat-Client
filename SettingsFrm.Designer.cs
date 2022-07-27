@@ -34,12 +34,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(428, 612);
+            this.ForeColor = System.Drawing.Color.DarkBlue;
             this.MaximizeBox = false;
             this.Name = "SettingsFrm";
-            this.Text = "SettingsFrm";
+            this.Text = "MSNLD Chat Settings";
             this.Load += new System.EventHandler(this.SettingsFrm_Load);
-            this.Shown += new System.EventHandler(this.SettingsFrm_Shown);
             this.ResumeLayout(false);
 
         }
