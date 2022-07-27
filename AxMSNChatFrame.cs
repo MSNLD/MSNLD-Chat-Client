@@ -52,8 +52,8 @@
                 ocx.SubscriberInfo = "";
                 //TopBackHighlightColor
                 ocx.Topic = "";
-                //UpsellURL
-                //URLBack
+                //UpsellURL = "subscribe.msnw"
+                //URLBack = "default.msnw"
                 ocx.UserRole = "";
                 ocx.WelcomeMsg = "";
                 ocx.WhisperContent = "http://g.msn.com/5chenus/31";
