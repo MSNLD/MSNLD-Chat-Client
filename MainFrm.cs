@@ -31,5 +31,13 @@ namespace msnld_client
             joinFrm.StartPosition = FormStartPosition.CenterParent;
             joinFrm.Show();
         }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsFrm settingsFrm = new SettingsFrm();
+            //settingsFrm.MdiParent = this;
+            settingsFrm.StartPosition = FormStartPosition.CenterParent;
+            settingsFrm.ShowDialog();
+        }
     }
 }
