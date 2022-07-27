@@ -11,7 +11,6 @@
             _hostname = hostname;
             _port = port;
             _channel = channel;
-            this.SetAboutBoxDelegate(null);
         }
 
         protected override void AttachInterfaces()
