@@ -48,11 +48,23 @@ namespace msnld_client
                 port = sl.getPort();
             }
             var form = new ChannelFrm();
-            var ocx = new AxMSNChat(server, port, JoinChannelName.Text);
+            var ocx = new AxMSNChatFrame(server, port, JoinChannelName.Text);
             form.attachOCX(ocx);
             form.MdiParent = this.MdiParent;
             form.Show();
             Close();
+        }
+
+        private void JoinChannelName_TextChanged(object sender, EventArgs e)
+        {
+            if (JoinChannelName.Text == "")
+            {
+                ConnectBtn.Enabled = false;
+            }
+            else
+            {
+                ConnectBtn.Enabled = true;
+            }
         }
     }
 }

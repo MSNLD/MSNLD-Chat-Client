@@ -41,6 +41,34 @@
             this.ConnectBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // checkBox1
+            // 
+            this.checkBox1.Location = new System.Drawing.Point(0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 24);
+            this.checkBox1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -57,6 +85,7 @@
             this.JoinChannelName.Size = new System.Drawing.Size(534, 23);
             this.JoinChannelName.TabIndex = 1;
             this.JoinChannelName.Text = "The Lobby";
+            this.JoinChannelName.TextChanged += new System.EventHandler(this.JoinChannelName_TextChanged);
             // 
             // SkipLookup
             // 
@@ -111,6 +140,7 @@
             // 
             // JoinFrm
             // 
+            this.AcceptButton = this.ConnectBtn;
             this.ClientSize = new System.Drawing.Size(558, 137);
             this.Controls.Add(this.ConnectBtn);
             this.Controls.Add(this.textBox4);

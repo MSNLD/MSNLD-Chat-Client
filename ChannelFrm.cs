@@ -19,10 +19,10 @@ namespace msnld_client
 
         private void ChannelFrm_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
 
-        public void attachOCX(AxMSNChat axMSNChat)
+        public void attachOCX(AxMSNChatFrame axMSNChat)
         {
             axMSNChat.Dock = DockStyle.Fill;
             this.Controls.Add(axMSNChat);

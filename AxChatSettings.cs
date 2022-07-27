@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace msnld_client
+﻿namespace msnld_client
 {
     public class AxChatSettings : AxHost
     {
@@ -19,11 +12,11 @@ namespace msnld_client
             try
             {
                 // Attach the ChatSettings interface to the ActiveX control.
-                var ocx = (MSNChat.ChatSettings)(this.GetOcx());
-                ocx.BackColor = ToUint(Color.White);
-                ocx.ForeColor = ToUint(Color.Black);
-                ocx.RedirectURL = "http://localhost/";
-                ocx.ResDLL = "";
+                var ocx = (MSNChat.IChatSettings)this.GetOcx();
+                //ocx.BackColor = ToUint(Color.White);
+                //ocx.ForeColor = ToUint(Color.White);
+                //ocx.RedirectURL = "";
+                //ocx.ResDLL = "";
             }
             catch (System.Exception ex)
             {
@@ -31,9 +24,9 @@ namespace msnld_client
             }
         }
 
-        private static uint ToUint(Color c)
+/*        private static uint ToUint(Color c)
         {
             return (uint)(((c.A << 24) | (c.R << 16) | (c.G << 8) | c.B) & 0xffffffffL);
-        }
+        }*/
     }
 }

@@ -12,7 +12,7 @@ namespace msnld_client
 {
     public partial class InstallFrm : Form
     {
-        public AxMSNChat _ocx;
+        //public AxMSNChatFrame _ocx;
         public InstallFrm()
         {
 
