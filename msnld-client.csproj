@@ -14,11 +14,11 @@
 
   <ItemGroup>
     <COMReference Include="MSNChat">
+      <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
       <VersionMajor>1</VersionMajor>
       <Guid>0f0a655c-6c6d-4e0b-8038-f980b36f9c78</Guid>
       <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
