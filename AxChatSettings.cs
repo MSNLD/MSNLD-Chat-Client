@@ -13,7 +13,7 @@
             try
             {
                 // Attach the ChatSettings interface to the ActiveX control.
-                var ocx = (MSNChat.IChatSettings)this.GetOcx();
+                var ocx = (MSNChat.ChatSettings)this.GetOcx();
                 // Background Color
                 ocx.BackColor = AxHost.GetOleColorFromColor(this.parentFrm.BackColor);
                 // Section Titles

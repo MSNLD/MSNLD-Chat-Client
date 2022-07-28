@@ -1,5 +1,5 @@
 ﻿namespace msnld_client
-{
+
     public class AxMSNChatFrame : AxHost
     {
         private string _hostname;
@@ -18,7 +18,7 @@
             try
             {
                 // Attach the IChatFrame interface to the ActiveX control.
-                var ocx = (MSNChat.IChatFrame)this.GetOcx();
+                var ocx = (MSNChat.MSNChatFrame)this.GetOcx();
                 ocx.AuditMessage = "Note: MSN has detected that you are connected to this chat session from the IP address <B>%1</B>.";
                 //BackColor
                 //BackHighlightColor

@@ -13,7 +13,7 @@
             try
             {
                 // Attach the IChatFrame interface to the ActiveX control.
-                var ocx = (MSNChat.IChatFrame)this.GetOcx();
+                var ocx = (MSNChat.MSNChatFrame)this.GetOcx();
                 ocx.ChatMode = 3;
             }
             catch (System.Exception ex)
