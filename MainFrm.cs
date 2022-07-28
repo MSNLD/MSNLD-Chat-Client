@@ -16,14 +16,9 @@ namespace msnld_client
 
         private void MainFrm_Load(object sender, EventArgs e)
         {
-            //var x = new SocketListener("irc.irc7.com 6667");
-            //System.Diagnostics.Debug.WriteLine($"Test {x.getPort()}");
-            //x = null;
-
-            //InstallFrm installFrm = new InstallFrm();
-            //installFrm.MdiParent = this;
-            //installFrm.StartPosition = FormStartPosition.CenterParent;
-            //installFrm.Show();
+            InstallFrm installFrm = new InstallFrm();
+            installFrm.StartPosition = FormStartPosition.CenterParent;
+            installFrm.ShowDialog();
         }
 
         private void joinToolStripMenuItem_Click(object sender, EventArgs e)
