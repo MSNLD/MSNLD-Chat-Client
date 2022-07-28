@@ -5,7 +5,6 @@
         Form parentFrm;
         public AxChatSettings(Form parentFrm) : base("{FA980E7E-9E44-4d2f-B3C2-9A5BE42525F8}")
         {
-            this.SetAboutBoxDelegate(null);
             this.parentFrm = parentFrm;
         }
 
