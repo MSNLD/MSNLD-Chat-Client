@@ -2,15 +2,11 @@
 
     public class AxMSNChatFrame : AxHost
     {
-        private string _hostname;
-        private int _port;
-        private string _channel;
+        private RequestedSettings requestedSettings;
 
-        public AxMSNChatFrame(string hostname, int port, string channel) : base("{F58E1CEF-A068-4c15-BA5E-587CAF3EE8C6}")
+        public AxMSNChatFrame(RequestedSettings requestedSettings) : base("{F58E1CEF-A068-4c15-BA5E-587CAF3EE8C6}")
         {
-            _hostname = hostname;
-            _port = port;
-            _channel = channel;
+            this.requestedSettings = requestedSettings;
         }
 
         protected override void AttachInterfaces()
@@ -42,13 +38,13 @@
                 ocx.MessageOfTheDay = "Welcome to MSN Chat! MSN does not control or endorse the content, messages or information found in chat. MSN specifically disclaims any liability with regard to these areas. To review the MSN Chat guidelines, go to http://groups.msn.com/conduct NOTICE: To help protect you from spam, MSN Chat is now available by subscription only. Learn more at http://getchat.msn.com";
                 ocx.MSNProfile = "";
                 ocx.MSNREGCookie = "";
-                ocx.NickName = "JD"; // Nickname
+                ocx.NickName = requestedSettings.Nickname; // Nickname
                 //NicknameToInvite
                 ocx.PassportProfile = "";
                 ocx.PassportTicket = "";
                 //ResDLL
-                ocx.RoomName = _channel; // RoomName (Required)
-                ocx.Server = $"{_hostname}:{_port}"; // Server (Required), Format: <hostname>[:port]
+                ocx.RoomName = requestedSettings.RoomName; // RoomName (Required)
+                ocx.Server = $"{requestedSettings.Server}:{requestedSettings.Port}"; // Server (Required), Format: <hostname>[:port]
                 ocx.SubscriberInfo = "";
                 //TopBackHighlightColor
                 ocx.Topic = "";

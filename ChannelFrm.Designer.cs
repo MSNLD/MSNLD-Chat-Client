@@ -38,8 +38,8 @@
             this.Name = "ChannelFrm";
             this.Text = "Chatroom";
             this.Load += new System.EventHandler(this.ChannelFrm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChannelFrm_FormClosed);
             this.ResumeLayout(false);
-
         }
 
         #endregion

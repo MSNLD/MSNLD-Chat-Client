@@ -36,24 +36,22 @@ namespace msnld_client
 
         private void ConnectBtn_Click(object sender, EventArgs e)
         {
-            //if (!SpecifyServer.Checked)
-            //{
-                var server = "irc.irc7.com";
-                var port = 6667;
-            //}
+            var requestedSettings = new RequestedSettings();
+            if (!SpecifyServer.Checked)
+            {
+                //RequestedSettings.Server = "irc.irc7.com";
+                //RequestedSettings.Port = 6667;
+            }
             if (SkipLookup.Checked)
             {
-                var sl = new SocketListener($"{server} {port}");
-                server = "127.0.0.1";
-                port = sl.getPort();
+                requestedSettings.InternalLookup = true;
             }
-            var form = new ChannelFrm();
-            var activeX = new AxMSNChatFrame(server, port, JoinChannelName.Text);
-            form.attachOCX(activeX);
-            form.MdiParent = Application.OpenForms[0];
-            form.Text = JoinChannelName.Text;
-            form.Show();
+            requestedSettings.RoomName = JoinChannelName.Text;
+
             Close();
+            var accountDlg = new AccountDlg(requestedSettings);
+            accountDlg.StartPosition = FormStartPosition.CenterParent;
+            accountDlg.ShowDialog();
         }
 
         private void JoinChannelName_TextChanged(object sender, EventArgs e)
