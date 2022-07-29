@@ -23,20 +23,32 @@ namespace msnld_client
         private static void AcceptCallback(IAsyncResult ar)
         {
             var sl = (SocketListener)ar.AsyncState!;
-            var socket = sl._socket;
-            var connection = socket.EndAccept(ar);
-            socket.Close(); // Close listening socket
-            // Fake FINDS reply with minimal data.
-            var payload = Encoding.Latin1.GetBytes($": 613 - :{sl._channelServer}\r\n");
-            connection.Send(payload);
-            connection.Close();
+            Socket? socket;
+            try
+            {
+                // Fake FINDS reply with minimal data.
+                socket = sl._socket.EndAccept(ar);
+                var payload = Encoding.Latin1.GetBytes($": 613 - :{sl._channelServer}\r\n");
+                socket.Send(payload);
+                socket.Close();
+            }
+            catch (Exception e) {
+                socket = null;
+            }
         }
 
         public int getPort()
         {
             var ep = _socket.LocalEndPoint;
-            if (ep == null) return 0;
+            if (ep == null)
+                return 0;
             return ((IPEndPoint) ep).Port;
+        }
+
+        internal void dispose()
+        {
+            _socket.Close();
+            _socket.Dispose();
         }
     }
 }
