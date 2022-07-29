@@ -52,7 +52,7 @@ Clears the text displayed in the chatroom
 
 `/credits`
 
-Opens up a browser window with the MSN Chat Team group (no longer available)
+Opens up a browser window with the [MSN Chat Team community](http://communities.msn.com/MSNChatTeam/) (no longer available)
 
 `/invite <nickname>`
 
