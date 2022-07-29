@@ -24,7 +24,7 @@
                 //ButtonTextColor
                 ocx.Category = "GN";
                 ocx.ChannelLanguage = "EN-US"; // Not sure this format is correct.
-                //ChatHome
+                //ChatHome = "default.msnw"
                 ocx.ChatMode = 1;
                 //ocx.ChatMode = 3; // Smiley Face
                 //CreateRoom

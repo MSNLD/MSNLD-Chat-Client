@@ -62,6 +62,7 @@ namespace msnld_client
                 DownloadBtn.Text = "Continue";
                 DownloadBtn.Click -= DownloadBtn_Click!;
                 DownloadBtn.Click += (sender, e) => this.Close();
+                DownloadBtn.Enabled = true;
             }
             else
             {
