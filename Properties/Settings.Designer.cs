@@ -22,5 +22,17 @@ namespace msnld_client.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GuestNicknames {
+            get {
+                return ((string)(this["GuestNicknames"]));
+            }
+            set {
+                this["GuestNicknames"] = value;
+            }
+        }
     }
 }
