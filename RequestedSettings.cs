@@ -18,7 +18,7 @@ namespace msnld_client
         {
             this.Server = "irc.irc7.com";
             this.Port = 6667;
-            this.InternalLookup = true;
+            this.InternalLookup = false;
             this.Nickname = new Random().Next(0, 9999).ToString("D4");
             this.RoomName = "The Lobby";
             //var x = new MSNChat.MSNChatFrame();
