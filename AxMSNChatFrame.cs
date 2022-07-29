@@ -1,4 +1,4 @@
-﻿namespace msnld_client
+﻿namespace msnld_client {
 
     public class AxMSNChatFrame : AxHost
     {
