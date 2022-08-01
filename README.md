@@ -1,6 +1,16 @@
 # MSNLD Client
 
-The MSNLD Client hosts the MSN Chat Control on your computer. It's available for computers running Windows 7 and above.
+![MSNLD Chat Client](https://github.com/MSNLD/msnld-client/blob/master/MSNLD%20Chat.png)
+
+The MSNLD Client hosts the MSN Chat Control on your computer.
+
+## System requirements
+
+* Microsoft Windows 7 or later
+* [.Net 6.0 Desktop Runtime (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.7-windows-x86-installer)
+* MSN Chat Control 4.5
+
+If you don't have the MSN Chat Control installed, MSNLD Chat Client will install it for you. You may be prompted to provide Administrator access to download and install the MSN Chat Control. This is only required once, to register the MSN Chat Control on your PC.
 
 # MSN Chat Control
 
