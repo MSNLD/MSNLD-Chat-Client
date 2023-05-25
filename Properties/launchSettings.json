@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "msnld-client": {
-      "commandName": "Project",
-      "nativeDebugging": false
-    }
-  }
-}
