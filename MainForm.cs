@@ -15,7 +15,7 @@ namespace MSNLD_Chat_Client
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
