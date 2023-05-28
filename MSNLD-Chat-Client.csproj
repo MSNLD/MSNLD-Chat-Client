@@ -14,4 +14,8 @@
     <Exec Command="@REM Tools -&gt; Get tools and features -&gt; Individual Components -&gt; MSVC v143 - VS 2022 C++ x64/x86 build tools (latest)&#xD;&#xA;set VSCMD_BANNER_TEXT_ALT=Using VS Shell to set /NXCOMPAT:NO&#xD;&#xA;call &quot;$(DevEnvDir)..\..\VC\Auxiliary\Build\vcvars32.bat&quot;&#xD;&#xA;editbin.exe /NOLOGO /NXCOMPAT:NO &quot;$(TargetDir)$(TargetName).exe&quot;" />
   </Target>
 
+  <ItemGroup>
+    <PackageReference Include="PInvoke.User32" Version="0.7.124" />
+  </ItemGroup>
+
 </Project>
