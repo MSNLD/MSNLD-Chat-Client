@@ -5,9 +5,10 @@ namespace MSNLD_Chat_Client
     internal class ChatFrame : AxHost
     {
         private Action<MSNChatFrame> Callback;
+
         /// <summary>
         ///  Creates a new instance of a control which wraps the MSN Chat Control.
-        ///  Callback contains the MSNChatFrame and is called when the control is ready to be used.
+        ///  Callback receives the MSNChatFrame object and is called when the control is ready to be used.
         /// </summary>
         public ChatFrame(Action<MSNChatFrame> callback) : base("F58E1CEF-A068-4c15-BA5E-587CAF3EE8C6", 0)
         {
@@ -33,7 +34,7 @@ namespace MSNLD_Chat_Client
         {
             get
             {
-                return new Size(64, 64); // Size of test smiley
+                return new Size(426, 288); // Minimum size for the control.
             }
         }
     }
